@@ -1,7 +1,9 @@
-import { createApp, destroyApp, updateApp } = from './src/ReactRenderer.jsx'
-    )
 async function create(afterRenderHook) {
   try {
+    const { createApp, destroyApp, updateApp } = await import(
+      './src/ReactRenderer.jsx'
+    )
+
     createApp()
 
     return {
