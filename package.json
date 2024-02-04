@@ -1,6 +1,6 @@
 {
   "name": "@gardenjs/render-plugin-react",
-  "version": "0.0.1-alpha02",
+  "version": "0.0.1-alpha03",
   "description": "Plugin for rendering react components in gardenjs",
   "main": "index.js",
   "type": "module",
@@ -33,7 +33,8 @@
     "prettier": "^3.2.5"
   },
   "dependencies": {
-    "react": "^18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "lint-staged": {
     "*.+(js|jsx)": "eslint --fix",
