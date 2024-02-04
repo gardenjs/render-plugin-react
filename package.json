@@ -1,0 +1,41 @@
+{
+  "name": "@gardenjs/render-plugin-react",
+  "version": "0.0.1-alpha01",
+  "description": "Plugin for rendering react components in gardenjs",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky",
+    "format": "prettier --write .",
+    "lint": "eslint src/."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gardenjs/render-plugin-react.git"
+  },
+  "keywords": [
+    "gardenjs",
+    "render",
+    "plugin",
+    "react"
+  ],
+  "author": "Robin Danzinger",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gardenjs/render-plugin-react/issues"
+  },
+  "homepage": "https://github.com/gardenjs/render-plugin-react#readme",
+  "devDependencies": {
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "husky": "^9.0.10",
+    "lint-staged": "^15.2.1",
+    "prettier": "^3.2.5"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  },
+  "lint-staged": {
+    "*.+(js|jsx)": "eslint --fix",
+    "*.+(json|css|md)": "prettier --write"
+  }
+}
