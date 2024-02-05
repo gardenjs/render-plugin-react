@@ -3,9 +3,7 @@ async function create(afterRenderHook) {
     const { createApp, destroyApp, updateApp } = await import(
       './src/ReactRenderer.jsx'
     )
-
     createApp()
-
     return {
       destroy: () => destroyApp(),
       updateComponent: (props) => {
