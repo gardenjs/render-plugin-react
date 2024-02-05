@@ -13,9 +13,7 @@ export const destroyApp = () => {
 }
 
 export const updateApp = (props) => {
-  destroyApp()
-  createApp()
-  app.render(<DynamicComponent {...props} />)
+  app?.render(<DynamicComponent {...props} />)
 }
 
 function DynamicComponent({
@@ -24,9 +22,9 @@ function DynamicComponent({
   afterRenderHook,
 }) {
   if (afterRenderHook) {
-    useEffect(async () => {
-      await afterRenderHook?.()
-    }, [])
+    useEffect(() => {
+      afterRenderHook?.()
+    }, [Component, selectedExample])
   }
   return (
     <React.StrictMode>
