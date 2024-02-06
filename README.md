@@ -1,2 +1,3 @@
-# render-plugin-svelte
-Plugin for rendering svelte componens in gardenjs
+# render-plugin-react
+
+Plugin for rendering React components in Gardenjs.
