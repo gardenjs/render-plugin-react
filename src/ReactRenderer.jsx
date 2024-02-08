@@ -4,12 +4,12 @@ import { createRoot } from 'react-dom/client'
 let app
 
 export const createApp = () => {
-  app = createRoot(document.getElementById('app'))
+  app = createRoot(document.getElementById('garden_app'))
 }
 
 export const destroyApp = () => {
   app?.unmount?.()
-  document.getElementById('app').innerHTML = ''
+  document.getElementById('garden_app').innerHTML = ''
 }
 
 export const updateApp = (props) => {
