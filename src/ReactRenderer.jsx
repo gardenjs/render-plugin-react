@@ -20,11 +20,25 @@ function DynamicComponent({
   component: Component,
   selectedExample,
   afterRenderHook,
+  decorators,
 }) {
   if (afterRenderHook) {
     useEffect(() => {
       afterRenderHook?.()
     }, [Component, selectedExample])
+  }
+  if (decorators?.length > 0) {
+    const Decorator = decorators[0]
+    return (
+      <Decorator>
+        <DynamicComponent
+          component={Component}
+          selectedExample={selectedExample}
+          afterRenderHook={afterRenderHook}
+          decorators={decorators.slice(1)}
+        ></DynamicComponent>
+      </Decorator>
+    )
   }
   return (
     <React.StrictMode>
