@@ -1,6 +1,6 @@
 {
   "name": "@gardenjs/render-plugin-react",
-  "version": "0.0.1-alpha08",
+  "version": "0.0.1-alpha07",
   "description": "Plugin for rendering react components in gardenjs",
   "main": "index.js",
   "type": "module",
